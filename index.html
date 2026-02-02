@@ -1,217 +1,188 @@
-<!DOCTYPE html>
-<html>
+
+
+ <!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Razx RP Support System</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<title>Razx RP | Official Support & Development</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{background:#0b0b0b;color:#fff;font-family:Arial}
-h2,h3{color:#ff2e2e}
-.box{background:#151515;padding:15px;margin:10px;border-radius:10px}
-input,textarea,select,button{
- width:100%;padding:10px;margin-top:8px;
- border:none;border-radius:6px
+*{
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
-button{background:#ff2e2e;color:white;font-weight:bold}
-.ticket{border:1px solid #ff2e2e;padding:10px;margin-top:10px;border-radius:8px}
-.small{font-size:13px;color:#bbb}
+body{
+  margin:0;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at top, #b30000, #050505 65%);
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.glow{
+  position:absolute;
+  width:260px;
+  height:260px;
+  background:#ff0000;
+  filter:blur(130px);
+  opacity:0.25;
+  top:-80px;
+  right:-80px;
+}
+.main{
+  width:100%;
+  max-width:440px;
+  background:rgba(12,12,12,0.96);
+  border-radius:24px;
+  padding:32px 24px;
+  box-shadow:
+    0 0 35px rgba(255,0,0,0.45),
+    inset 0 0 18px rgba(255,0,0,0.15);
+}
+.logo{
+  text-align:center;
+  font-size:34px;
+  font-weight:700;
+  color:#ff2b2b;
+  letter-spacing:1.5px;
+}
+.subtitle{
+  text-align:center;
+  font-size:13px;
+  opacity:0.85;
+  margin-top:6px;
+}
+.divider{
+  height:2px;
+  width:90px;
+  background:linear-gradient(90deg,transparent,#ff0000,transparent);
+  margin:22px auto 28px;
+}
+.intro{
+  font-size:13.5px;
+  line-height:1.6;
+  opacity:0.9;
+  text-align:center;
+  margin-bottom:24px;
+}
+.card{
+  background:#111;
+  border-radius:18px;
+  padding:22px;
+  margin-bottom:20px;
+  box-shadow:0 0 20px rgba(255,0,0,0.25);
+}
+.card h2{
+  margin:0;
+  font-size:19px;
+  color:#ff4d4d;
+}
+.card p{
+  font-size:13px;
+  line-height:1.6;
+  opacity:0.85;
+  margin:10px 0 16px;
+}
+ul{
+  padding-left:18px;
+  margin:0 0 16px;
+}
+ul li{
+  font-size:12.8px;
+  margin-bottom:6px;
+  opacity:0.85;
+}
+.btn{
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  padding:14px;
+  border-radius:14px;
+  font-weight:600;
+  letter-spacing:0.6px;
+  color:#fff;
+  background:linear-gradient(135deg,#ff0000,#8b0000);
+  box-shadow:0 0 18px rgba(255,0,0,0.45);
+  transition:0.3s;
+}
+.btn:hover{
+  transform:scale(1.04);
+  box-shadow:0 0 28px rgba(255,0,0,0.7);
+}
+.footer{
+  text-align:center;
+  margin-top:22px;
+  font-size:11px;
+  opacity:0.6;
+}
 </style>
 </head>
+
 <body>
 
-<h2>🔥 Razx RP Support & Development</h2>
+<div class="glow"></div>
 
-<!-- CITIZEN -->
-<div class="box">
-<h3>👤 Citizen Ticket</h3>
-<input id="cname" placeholder="Name">
-<input id="cemail" placeholder="Email">
-<select id="cat">
-<option>Police</option><option>EMS</option>
-<option>Gang</option><option>Other</option>
-</select>
-<textarea id="cmsg" placeholder="Problem / Development Idea"></textarea>
-<button onclick="createTicket()">Submit Ticket</button>
+<div class="main">
+  <div class="logo">RAZX ROLEPLAY</div>
+  <div class="subtitle">Official Support & Development Center</div>
+
+  <div class="divider"></div>
+
+  <div class="intro">
+    Welcome to the official Razx Roleplay support page.  
+    This platform is made for our citizens to easily contact the
+    Razx RP administration team regarding any in-game problems,
+    suggestions, or development ideas.  
+    Your feedback helps us improve realism, quality, and roleplay experience.
+  </div>
+
+  <!-- SUPPORT CARD -->
+  <div class="card">
+    <h2>🛠 Player Support</h2>
+    <p>
+      Facing any issue inside the server?  
+      You can directly contact our support team for help related to:
+    </p>
+    <ul>
+      <li>Account or character related problems</li>
+      <li>Game bugs, glitches, or crashes</li>
+      <li>Rule clarification or RP issues</li>
+      <li>Any other support assistance</li>
+    </ul>
+    <a class="btn"
+       href="mailto:razxroleplay@gmail.com?subject=Razx%20RP%20Support%20Request&body=Hello%20Razx%20RP%20Team,%0A%0AMy%20in-game%20issue%20is:%0A">
+       📩 Contact Support Team
+    </a>
+  </div>
+
+  <!-- DEVELOPMENT CARD -->
+  <div class="card">
+    <h2>💡 Development & Ideas</h2>
+    <p>
+      Razx RP grows with its community.  
+      If you have creative ideas or suggestions, feel free to share:
+    </p>
+    <ul>
+      <li>New factions, jobs, or organizations</li>
+      <li>Map improvements or realistic features</li>
+      <li>Events, systems, or roleplay mechanics</li>
+      <li>Quality of life improvements</li>
+    </ul>
+    <a class="btn"
+       href="mailto:razxroleplay@gmail.com?subject=Razx%20RP%20Development%20Idea&body=Hello%20Razx%20RP%20Team,%0A%0AMy%20development%20idea%20is:%0A">
+       ✨ Send Development Idea
+    </a>
+  </div>
+
+  <div class="footer">
+    © 2026 Razx Roleplay • Community Driven Roleplay Server
+  </div>
 </div>
 
-<div class="box">
-<h3>📥 Your Inbox</h3>
-<div id="inbox" class="small">Enter email to load tickets</div>
-</div>
-
-<hr>
-
-<!-- LOGIN -->
-<div class="box">
-<h3>🔐 Staff Login</h3>
-<input id="lemail" placeholder="Email">
-<input id="lpass" type="password" placeholder="Password">
-<button onclick="login()">Login</button>
-</div>
-
-<!-- OWNER -->
-<div class="box" id="ownerBox" style="display:none">
-<h3>👑 Website Owner Panel</h3>
-<input id="newEmail" placeholder="Email">
-<select id="newRole">
-<option value="chief">Chief Admin</option>
-<option value="admin">Admin</option>
-</select>
-<button onclick="assignRole()">Assign Role</button>
-</div>
-
-<!-- CHIEF -->
-<div class="box" id="chiefBox" style="display:none">
-<h3>🔥 Chief Admin – Manage Admins</h3>
-<div id="adminList"></div>
-</div>
-
-<!-- ADMIN -->
-<div class="box" id="adminBox" style="display:none">
-<h3>🛠️ Support Tickets</h3>
-<div id="ticketList"></div>
-</div>
-
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-import {
- getFirestore, collection, addDoc, getDocs,
- query, where, doc, setDoc, deleteDoc, updateDoc
-} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-/* 🔴 CHANGE THIS */
-const OWNER_EMAIL = "owner@razxrp.com";
-
-const firebaseConfig={
- apiKey:"PASTE",
- authDomain:"PASTE",
- projectId:"PASTE"
-};
-
-initializeApp(firebaseConfig);
-const auth=getAuth();
-const db=getFirestore();
-
-/* TICKET CREATE */
-window.createTicket=async()=>{
- const id="RZXP-"+Math.floor(Math.random()*99999);
- await addDoc(collection(db,"tickets"),{
-  ticketId:id,
-  name:cname.value,
-  email:cemail.value,
-  category:cat.value,
-  message:cmsg.value,
-  reply:"",
-  status:"Pending",
-  time:Date.now()
- });
- alert("Ticket Created: "+id);
- loadInbox();
-};
-
-/* CITIZEN INBOX */
-async function loadInbox(){
- if(!cemail.value) return;
- inbox.innerHTML="";
- const q=query(collection(db,"tickets"),where("email","==",cemail.value));
- const s=await getDocs(q);
- s.forEach(d=>{
-  const t=d.data();
-  inbox.innerHTML+=`
-   <div class="ticket">
-   🎫 ${t.ticketId}<br>
-   Status: <b>${t.status}</b><br>
-   Reply: ${t.reply || "Waiting"}
-   </div>`;
- });
-}
-cemail.onchange=loadInbox;
-
-/* LOGIN */
-window.login=()=>{
- signInWithEmailAndPassword(auth,lemail.value,lpass.value)
- .then(()=>checkRole(lemail.value))
- .catch(()=>alert("Login failed"));
-};
-
-/* ROLE CHECK */
-async function checkRole(email){
- if(email===OWNER_EMAIL){
-  ownerBox.style.display="block";
-  chiefBox.style.display="block";
-  adminBox.style.display="block";
- }
- const q=query(collection(db,"users"),where("email","==",email));
- const s=await getDocs(q);
- s.forEach(d=>{
-  if(d.data().role==="chief"){
-   chiefBox.style.display="block";
-   adminBox.style.display="block";
-  }
-  if(d.data().role==="admin"){
-   adminBox.style.display="block";
-  }
- });
- loadAdmins();
- loadTickets();
-}
-
-/* OWNER ASSIGN ROLE */
-window.assignRole=async()=>{
- await setDoc(doc(db,"users",newEmail.value),{
-  email:newEmail.value,
-  role:newRole.value
- });
- alert("Role Assigned");
- loadAdmins();
-};
-
-/* CHIEF FIRE ADMIN */
-async function loadAdmins(){
- adminList.innerHTML="";
- const s=await getDocs(collection(db,"users"));
- s.forEach(d=>{
-  if(d.data().role==="admin"){
-   adminList.innerHTML+=`
-    <p>${d.data().email}
-    <button onclick="fireAdmin('${d.id}')">Fire ❌</button></p>`;
-  }
- });
-}
-window.fireAdmin=async(id)=>{
- await deleteDoc(doc(db,"users",id));
- alert("Admin Fired");
- loadAdmins();
-};
-
-/* ADMIN TICKETS */
-async function loadTickets(){
- ticketList.innerHTML="";
- const s=await getDocs(collection(db,"tickets"));
- s.forEach(d=>{
-  const t=d.data();
-  ticketList.innerHTML+=`
-   <div class="ticket">
-   🎫 ${t.ticketId} | ${t.category}<br>
-   ${t.message}<br>
-   <input id="r${d.id}" placeholder="Reply">
-   <select id="s${d.id}">
-    <option>Pending</option>
-    <option>Replied</option>
-    <option>Closed</option>
-   </select>
-   <button onclick="reply('${d.id}')">Send</button>
-   </div>`;
- });
-}
-window.reply=async(id)=>{
- const r=document.getElementById("r"+id).value;
- const s=document.getElementById("s"+id).value;
- await updateDoc(doc(db,"tickets",id),{
-  reply:r,status:s
- });
- alert("Updated");
-};
-</script>
 </body>
-  </html>
+</html>
